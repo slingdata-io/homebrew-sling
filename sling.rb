@@ -11,7 +11,7 @@ class Sling < Formula
   on_macos do
     if Hardware::CPU.arm?
       url "https://github.com/slingdata-io/sling-cli/releases/download/v0.86.47/sling_0.86.47_Darwin_arm64.tar.gz"
-      sha256 "3ef4e280de6efeb3d7071d5839da59f54fbecbb41455dd07da2601fdc69e2768"
+      sha256 "498b8626f0dcd06bae80b7c02deafe99add759826754f69a90f9277cc2e953ae"
 
       def install
         bin.install "sling"
@@ -19,7 +19,7 @@ class Sling < Formula
     end
     if Hardware::CPU.intel?
       url "https://github.com/slingdata-io/sling-cli/releases/download/v0.86.47/sling_0.86.47_Darwin_x86_64.tar.gz"
-      sha256 "756c4b1a6e9b81fd5ee2d70a12e2b9bb1cdf1d865770c7219a2e1cbfe7d99ec3"
+      sha256 "524e3e1f11db9b624d40e1735f63ea1801972f9333d8b5174e2c3e9c57d6b56d"
 
       def install
         bin.install "sling"

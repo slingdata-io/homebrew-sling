@@ -5,21 +5,21 @@
 class Sling < Formula
   desc "Data Integration made simple, from the command line. Extract and load data from popular data sources to destinations with high performance and ease."
   homepage "https:/slingdata.io/"
-  version "1.0.68"
+  version "1.0.69"
   depends_on :macos
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/slingdata-io/sling-cli/releases/download/v1.0.68/sling_darwin_arm64.tar.gz"
-      sha256 "e563dd1b5ad4b6e41eb0011cc8447bb8a6bb60886adc02bc09f3993ccbe1ed42"
+      url "https://github.com/slingdata-io/sling-cli/releases/download/v1.0.69/sling_darwin_arm64.tar.gz"
+      sha256 "cdadb719d429ef5deac710768a01bf350eeec97b8aea8ad29f11066f3482c770"
 
       def install
         bin.install "sling"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/slingdata-io/sling-cli/releases/download/v1.0.68/sling_darwin_amd64.tar.gz"
-      sha256 "ea1e26e7aba1e8a88c0d1dabaa86169dea71a7b3bed6be9620d1da055de67485"
+      url "https://github.com/slingdata-io/sling-cli/releases/download/v1.0.69/sling_darwin_amd64.tar.gz"
+      sha256 "46e1f826aeab7c369336360d71fe4306118d61ee7ce97c9efe303f1a1a10510a"
 
       def install
         bin.install "sling"

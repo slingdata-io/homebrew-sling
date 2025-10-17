@@ -10,7 +10,7 @@ class Sling < Formula
 
   on_intel do
     url "https://github.com/slingdata-io/sling-cli/releases/download/v1.4.24/sling_darwin_amd64.tar.gz"
-    sha256 "1c3d4bb6d0d50871efb163251fefcd6b0163c4bfbc3d340aa9f6633f0be835ca"
+    sha256 "7a7f11eae96ec98fbb1031b87e7f7ceb06e63ec213a425a3ccd142de5e7308af"
 
     def install
       bin.install "sling"
@@ -18,7 +18,7 @@ class Sling < Formula
   end
   on_arm do
     url "https://github.com/slingdata-io/sling-cli/releases/download/v1.4.24/sling_darwin_arm64.tar.gz"
-    sha256 "30fcaaa12f42fc65213f78927f0b99d5d7b1795bc345593af6cd0b97ed0f2bff"
+    sha256 "30ee6901665ab549b7693404524b2ebf5eb406ffaa09e3dfc94a759f67c68352"
 
     def install
       bin.install "sling"

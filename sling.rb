@@ -5,23 +5,32 @@
 class Sling < Formula
   desc "Data Integration made simple, from the command line. Extract and load data from popular data sources to destinations with high performance and ease."
   homepage "https://slingdata.io/"
-  version "1.6.3"
+  version "1.6.4"
   depends_on :macos
 
   on_intel do
-    url "https://github.com/slingdata-io/sling-cli/releases/download/v1.6.3/sling_darwin_amd64.tar.gz"
-    sha256 "1c0befb2e695f02fe4717233715f3781fa790b612be42917d0554ac562d9425c"
+    url "https://github.com/slingdata-io/sling-cli/releases/download/v1.6.4/sling_darwin_amd64.tar.gz"
+    sha256 "627e45ee303c75f20a88ecbb0f10981b1d990fdeeb265ee1d4ea09e577fba071"
 
     def install
       bin.install "sling"
     end
   end
   on_arm do
-    url "https://github.com/slingdata-io/sling-cli/releases/download/v1.6.3/sling_darwin_arm64.tar.gz"
-    sha256 "67cbca60c41e18af5f15680bb1e105613df74bddcc4913aa916279ac8249ed31"
+    url "https://github.com/slingdata-io/sling-cli/releases/download/v1.6.4/sling_darwin_arm64.tar.gz"
+    sha256 "9b5726f1872c80c7836d167d4fe506671e7bbf45ea3dc91ff8abd871e1fe4574"
 
     def install
       bin.install "sling"
     end
+  end
+
+  service do
+    run [opt_bin/"sling", "serve", "workbench", "--no-browser"]
+    keep_alive true
+    working_dir Dir.home
+    log_path var/"log/sling-workbench.log"
+    error_log_path var/"log/sling-workbench.log"
+    environment_variables PATH: std_service_path_env
   end
 end
